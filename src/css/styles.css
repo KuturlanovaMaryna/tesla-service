@@ -42,7 +42,12 @@ ul {
 .page-header{
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-    
+    height: 500px;
+    background-image: url("../images/teslablack.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 72px;
 }
 .page-header-container{
     max-width: 1900px;
@@ -51,15 +56,12 @@ ul {
     text-align: center;
    
     justify-content: space-between;
-    background-color: rgb(255, 255, 255);
+    
 }
 .logo-icon{
     padding: 20px;
-    fill: rgb(9, 11, 19);
+    fill: rgb(255, 255, 255);
 }
-/* .social-list-icon{
- fill:rgb(10, 11, 19);
-}  */
 
 .contact-adress{
     color: rgb(9, 11, 19);
@@ -68,7 +70,7 @@ ul {
 .header{
     max-width: 1600px;
     margin: 0 219px;
-    height: 800px;
+    height: 550px;
     background-image: url("../images/teslablack.jpg");
     background-color: black;
     background-repeat: no-repeat;
@@ -83,12 +85,15 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;}
+    width: 24px;
+    height: 24px;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 50%;
+}
 
-
+.social-list-icon{
+    fill: white;
+}
 
 .social-list{
         padding: 20px;
@@ -122,6 +127,7 @@ ul {
 
 .services-icon{
     background-color: #F4F4FD;
+
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     border-radius: 4px;
     color: var(--primary-text-color);
