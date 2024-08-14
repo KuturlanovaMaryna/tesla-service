@@ -84,37 +84,51 @@ ul {
         .adress-nav {
             flex-wrap: wrap;
         }
-        .footer{
-            height: 280px;}
+        /* .footer{
+            height: 280px;} */
         .footer-contacts-title {
             margin-bottom: 0px;
         }
-.footer-contacts-blocks {
-   
-    flex-wrap: wrap;
-    
-    
-    
-}
+
 .footer-adress-nav {
-    flex-wrap: wrap;
+      
     justify-content: center;
-    gap: 20px;
+    
    
 }
 .footer-social-list {
     margin-top: 20px;
     margin-left: 14px;
+   justify-content: center;
 }
+.footer-map{
+    width:300px;
+    height: 300px;
+    margin-top: 40px;
+   
+}
+.footer-info {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+}
 .footer-adress-nav {
-
-    margin-top: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
 }
+.footer-social-block{
+    margin-bottom: 40px;
+}
+
 }
 
 @media screen and (min-width: 768px)  {
-    .page-header {
+ .page-header {
       width:100%;
       height: 300px;
         background-image: url("./images/tesla_black_tablet.jpg");
@@ -148,12 +162,37 @@ stroke-width: 0.2px;} */}
     }
 
 .footer {
-    height: 200px;
+    height: 400px;
+  padding-top: 40px;
+    
+}
+.footer-info{
+    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 .footer-social-list {
     margin-top: 0px;
     margin-left: 0px;
+    justify-content: flex-start;
     align-items: center;
+}
+.footer-adress-nav {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+
+
+}
+.footer-map {
+    width: 400px;
+    height: 350px;
+    margin-top: 0;
+
 }
 /* .services-list:nth-child(2n) {
     gap: 0;
@@ -293,12 +332,13 @@ background-position: center;
 
 
 .footer{
+    
 background-color: #000000;
 }
 
 .footer-contacts-blocks{
-    display: flex;
-    justify-content: space-around;
+    /* display: flex;
+    justify-content: space-around; */
     margin-top: 20px;
 }
 .footer-contacts-block{
@@ -311,7 +351,7 @@ background-color: #000000;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    padding-top: 40px;
+    /* padding-top: 40px; */
   
     text-align: center;
     color: white;
@@ -330,13 +370,7 @@ background-color: #000000;
     color: white;
 }
 
-.footer-adress-nav {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-   
-    gap: 40px;
-}
+
 
 /* .footer-adress {
     display: flex;
