@@ -27,76 +27,183 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="page">
-    <header class="page-header">
-      <div class="container page-header-container">
-        <a href="./index.html" class="logo link">
-          <svg class="logo-icon" width="30" height="30">
+    <header>
+      <div class="header-container">
+        <a class="logo link" href="index.html">
+          <svg class="logo-icon" width="16" height="16">
             <use href="./images/sprite.svg#icon-tesla"></use>
           </svg>
+          <span class="logo-decor">eslaDoc</span>
         </a>
-
-        <!-- <address class="adress">
-          <ul class="adress-nav list">
+        <nav class="header-nav">
+          <ul class="header-nav-list list">
             <li>
-              <a href="mailto:tooltesla@gmail.com" class="link contact-adress"
-                >tooltesla@gmail.com</a
+              <a
+                class="header-nav-item js-scroll-link link nav-item-pseudo"
+                href="#hero"
+                >Главная</a
               >
             </li>
             <li>
-              <a href="tel:+37379438254" class="link contact-adress"
-                >+373 (79) 438-254</a
+              <a
+                class="header-nav-item js-scroll-link link nav-item-pseudo"
+                href="#popular-services"
+                >Популярные услуги</a
+              >
+            </li>
+            <!-- <li>
+              <a
+                class="header-nav-item js-scroll-link link nav-item-pseudo"
+                href="#our-products"
+                >Авто</a
+              >
+            </li> -->
+            <li>
+              <a
+                class="header-nav-item js-scroll-link link nav-item-pseudo"
+                href="#reviews"
+                >Отзывы</a
+              >
+            </li>
+            <li>
+              <a
+                class="header-nav-item js-scroll-link link nav-item-pseudo"
+                href="#contacts"
+                >Контакты</a
               >
             </li>
           </ul>
-        </address> -->
-        <ul class="social-list list">
-          <li class="social-list-item">
+        </nav>
+        <ul class="social-networks list">
+          <li class="social-networks-icon">
             <a
+              class="header-icon-focus"
               href="https://www.instagram.com/tesladoc.md?igsh=ZGd0ZjF6YmN5OHZ6"
-              class="social-list-link"
+              target="_blank"
+              rel="noreferrer noopener"
             >
-              <svg class="social-list-icon" width="24" height="24">
+              <svg width="24" height="24">
                 <use href="./images/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <!-- <li class="social-list-item">
-            <a href="" class="social-list-link">
-              <svg class="social-list-icon" width="26" height="26">
-                <use href="./images/sprite.svg#icon-facebook-square"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-list-item">
-            <a href="" class="social-list-link">
-              <svg class="social-list-icon" width="26" height="26">
-                <use href="./images/sprite.svg#icon-telegram"></use>
-              </svg>
-            </a>
-          </li> -->
-          <li class="social-list-item">
+          <li class="social-networks-icon">
             <a
+              class="header-icon-focus"
               href="https://invite.viber.com/?g=80Mzu5_OdlBqflV-zm9X94axPslabCJK"
-              class="social-list-link"
+              target="_blank"
+              rel="noreferrer noopener"
             >
-              <svg class="social-list-icon" width="26" height="26">
+              <svg width="24" height="24">
                 <use href="./images/sprite.svg#icon-viber"></use>
               </svg>
             </a>
           </li>
         </ul>
+        <button
+          type="button"
+          class="mobile-menu-open-btn js-open-modal"
+          data-modal="4"
+        >
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal mobile-menu" data-modal="4">
+        <div class="mobile-menu-container">
+          <button type="button" class="mobile-menu-close-btn js-modal-close">
+            <svg class="mobile-menu-close-icon" width="28" height="28">
+              <use href="./images/close.svg#icon-x-close"></use>
+            </svg>
+          </button>
+          <ul class="header-nav-list-mobile list">
+            <li class="header-nav-item-mobile">
+              <a
+                class="header-nav-item link js-scroll-link js-modal-close"
+                href="#hero"
+                >Главная</a
+              >
+            </li>
+            <li class="header-nav-item-mobile">
+              <a
+                class="header-nav-item link js-scroll-link js-modal-close"
+                href="#popular-services"
+                >Популярные услуги</a
+              >
+            </li>
+            <li class="header-nav-item-mobile">
+              <a
+                class="header-nav-item link js-scroll-link js-modal-close"
+                href="#reviews"
+                >Отзывы</a
+              >
+            </li>
+
+            <li class="header-nav-item-mobile">
+              <a
+                class="header-nav-item link js-scroll-link js-modal-close"
+                href="#contacts"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+          <ul class="social-networks-mobile list">
+            <li class="social-networks-icon-mobile">
+              <a
+                class="header-icon-focus"
+                href="https://www.instagram.com/tesladoc.md?igsh=ZGd0ZjF6YmN5OHZ6"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg width="24" height="24">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-networks-icon-mobile">
+              <a
+                class="header-icon-focus"
+                href="https://invite.viber.com/?g=80Mzu5_OdlBqflV-zm9X94axPslabCJK"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg width="24" height="24">
+                  <use href="./images/sprite.svg#icon-viber"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
+      <section id="hero" class="hero">
+        <div class="hero-container container">
+          <h1 class="visually-hidden">hero</h1>
+          <div class="hero-title">
+            <h2 class="hero-text text">TeslaDoc</h2>
+
+            <div class="scroll-container">
+              <a href="tel:+380636324747" class="call-btn link">
+                <svg class="call-btn-icon" width="24" height="24">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                <p class="call-btn-text">Связаться</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="header">
         <h1 class="header-title">
           Tesla Service Moldova(Сервис Тесла Молдова)
         </h1>
         <div class="container header-container"></div>
       </section>
-      <section class="services">
+      <section id="popular-services" class="services">
         <div class="container">
-          <h2 class="services-title">Популярные услуги</h2>
+          <h2 class="services-title visually-hidden">Популярные услуги</h2>
           <ul class="services-list list">
             <li class="services-list-item">
               <div class="services-icon">
@@ -182,15 +289,21 @@
           </ul>
         </div>
       </section>
+      <section id="reviews">
+        <div class="container">
+          <script
+            src="https://static.elfsight.com/platform/platform.js"
+            data-use-service-core
+            defer
+          ></script>
+          <div
+            class="elfsight-app-a9689574-5c8f-47f2-bd51-70c66050f6f4"
+            data-elfsight-app-lazy
+          ></div>
+        </div>
+      </section>
     </main>
-    <footer class="footer" id="footer">
-      <!-- <div class="footer-logo-block">
-        <a href="./index.html" class="logo link">
-          <svg class="logo-icon" width="50" height="50">
-            <use href="./images/sprite.svg#icon-tesla"></use>
-          </svg>
-        </a>
-      </div> -->
+    <footer class="footer" id="contacts">
       <div class="footer-info container">
         <div class="footer-map-section">
           <iframe
@@ -198,7 +311,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6599.9752197341695!2d28.921886308482186!3d46.980750955512384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97b007e171543%3A0xdd99cf147505cb79!2sTeslaDoc!5e0!3m2!1sru!2s!4v1723623680348!5m2!1sru!2s"
             width="500"
             height="350"
-            style="border: 0"
+            style="border: 0; border-radius: 24px"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -251,20 +364,6 @@
                   </svg>
                 </a>
               </li>
-              <!-- <li class="footer-social-list-item">
-                <a href="" class="footer-social-list-link">
-                  <svg class="footer-social-list-icon" width="26" height="26">
-                    <use href="./images/sprite.svg#icon-facebook-square"></use>
-                  </svg>
-                </a>
-              </li> -->
-              <!-- <li class="footer-social-list-item">
-                <a href="" class="footer-social-list-link">
-                  <svg class="footer-social-list-icon" width="26" height="26">
-                    <use href="./images/sprite.svg#icon-telegram"></use>
-                  </svg>
-                </a>
-              </li> -->
               <li class="footer-social-list-item">
                 <a
                   href="https://invite.viber.com/?g=80Mzu5_OdlBqflV-zm9X94axPslabCJK"
@@ -280,5 +379,6 @@
         </div>
       </div>
     </footer>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -1,4 +1,6 @@
 
+
+
 body {
     font-family: 'Roboto', serif;
 }
@@ -23,6 +25,18 @@ ul {
 .link {
     text-decoration: none;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 .list {
     list-style: none;
@@ -37,6 +51,227 @@ ul {
 }
 .header{
     display: none;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 14px 20px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.header-icon-focus{
+    fill:black;
+    stroke:none;
+}
+.header-nav-item{
+    color: #000000;
+}
+
+
+/* =============== MOBILE MENU =============== */
+.mobile-menu-open-btn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    line-height: 0;
+}
+.burger-icon{
+    stroke: black;
+}
+
+
+.mobile-menu {
+    position: fixed;
+    max-width: 220px;
+    max-height: 830px;
+    top: 0;
+    right: 0;
+    background-color:#bfbfd6;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 84;
+}
+
+.mobile-menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 460px;
+    height: 830px;
+    padding: 136px 44px 20px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mobile-menu-close-btn {
+    position: absolute;
+    display: flex;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.mobile-menu-close-icon {
+stroke: #000000;
+    
+   
+}
+
+.mobile-menu-close-icon:hover {
+    stroke: rgb(86, 86, 86);
+}
+
+.header-nav-list-mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    color: white;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-nav-item-mobile:hover {
+    color: grey;
+}
+
+.social-networks-mobile {
+    display: flex;
+    gap: 18px;
+}
+
+.social-networks-icon-mobile {
+    fill: transparent;
+    stroke: white;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-networks-icon-mobile:hover {
+    stroke: grey;
+}
+
+.header-icon-focus:focus {
+    stroke: grey;
+}
+
+@media screen and (max-width: 1199px) {
+
+    .header-nav,
+    .social-networks {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .header-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 375px;
+    }
+
+    .mobile-menu-container {
+        gap: 400px;
+    }
+}
+
+/* =============== TABLET =============== */
+
+@media screen and (min-width: 768px) {
+    .header-container {
+        width: 768px;
+        padding: 24px 32px;
+    }
+
+    .mobile-menu-open-btn {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* =============== DESCTOP =============== */
+
+@media screen and (min-width: 1200px) {
+    .header-container {
+        width: 1200px;
+        padding: 24px 32px 32px 32px;
+    }
+
+    .header-nav {
+        display: flex;
+    }
+
+    .header-nav-list {
+        display: flex;
+        gap: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: -0.02em;
+    }
+
+    .social-networks {
+        display: flex;
+        height: 24px;
+        gap: 18px;
+    }
+
+    .social-networks-icon {
+        fill: none;
+        stroke: black;
+        transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-menu-open-btn {
+        display: none;
+    }
+
+    .header-nav-item {
+        position: relative;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .header-nav-item:hover,
+    .header-nav-item:focus {
+        color: grey;
+    }
+
+    .nav-item-pseudo:after {
+        position: absolute;
+        display: none;
+        bottom: -8px;
+        content: '';
+        width: 75%;
+        height: 1px;
+        border-radius: 2px;
+        background-color: grey;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-item-pseudo:hover::after,
+    .nav-item-pseudo:focus::after {
+        display: block;
+    }
+
+    .social-networks-icon:hover,
+    .social-networks-icon:focus {
+        stroke: grey;
+    }
 }
 
 @media screen and (min-width: 320px) {
@@ -64,28 +299,27 @@ ul {
 
 
 @media screen and (min-width: 300px) {
-    .page-header {
-        width: 100%;
-        height: 240px;
-        background-image: url("./images/tesla_black_mobilem.jpg");
-        background-position: center;
-    }
-        .page-header-container {
-            min-width: 325px;
-            /* margin-left: auto;
-            margin-right: auto; */
+    .logo-decor {
+            color: black;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.28;
+            letter-spacing: -0.03em;
         }
+        .logo-icon{
+            width: 12px;
+            height: 12px;
+        }
+    
         .social-list-item{
             display: none;
         }
-        .logo-icon{
-            padding: 20px;
-        }
+        
         .adress-nav {
             flex-wrap: wrap;
         }
-        /* .footer{
-            height: 280px;} */
+        
         .footer-contacts-title {
             margin-bottom: 0px;
         }
@@ -128,16 +362,18 @@ ul {
 }
 
 @media screen and (min-width: 768px)  {
- .page-header {
-      width:100%;
-      height: 300px;
-        background-image: url("./images/tesla_black_tablet.jpg");
-        background-position: center;
-    
-    }
-.page-header-container {
-    max-width: 768px;
-}
+    .logo-decor {
+            color: black;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1.28;
+            letter-spacing: -0.03em;
+        }
+ .logo-icon {
+     width: 16px;
+     height: 16px;
+ }
 .social-list-item {
     display: flex;
     justify-content: center;
@@ -147,13 +383,7 @@ ul {
     /* background-color: rgb(255, 255, 255); */
     border-radius: 50%;
 }
-.logo-icon {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 70px;
-    padding-left: 70px;
-/* stroke: red;
-stroke-width: 0.2px;} */}
+
 
 .services-list-item {
     width: 264px;
@@ -194,20 +424,11 @@ stroke-width: 0.2px;} */}
     margin-top: 0;
 
 }
-/* .services-list:nth-child(2n) {
-    gap: 0;
-} */
+
 }
 
 @media screen and (min-width: 1200px) {
-.page-header {
-width: 100%;
-background-image: url("./images/teslablack_descktop.jpg");
-background-position: center;
-}
 
-.page-header-container {
-    max-width: 1200px;}
 
    .services-list-item {
        width: 264px;
@@ -223,27 +444,6 @@ background-position: center;
 
 }
 
-.page-header {
-    border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: 72px;
-
-
-}
-
-.page-header-container{
-    color: rgb(9, 11, 19);
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-}
-
-.logo-icon{
-    fill: rgb(255, 255, 255);
-}
 
 .contact-adress{
     color: rgb(0, 0, 0);
@@ -337,8 +537,8 @@ background-position: center;
 
 
 .footer{
-    
-background-color: #000000;
+    margin-top:  72px;
+background-color: #03070d;
 }
 
 .footer-contacts-blocks{
@@ -380,3 +580,290 @@ background-color: #000000;
 /* .footer-adress {
     display: flex;
     align-items: center;} */
+
+
+        .hero {
+            margin-left: auto;
+            margin-right: auto;
+            /* margin-bottom: 71px; */
+        }
+    
+        .hero-title {
+            margin: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 30px;
+            background-size: cover;
+
+        }
+    
+        .call-btn {
+            display: flex;
+            border: none;
+    
+            font-weight: 700;
+            line-height: 1.21;
+            color:black;
+            align-items: center;
+            justify-content: center;
+            background:#F4F4FD;
+            border-radius: 100px;
+        }
+    
+        .call-btn:hover,
+        .call-btn:focus {
+            background: white;
+            color: black;
+        }
+    
+        .hero-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.21;
+        }
+    
+        .hero-link:hover,
+        .hero-link:focus {
+            border: 1px solid rgb(79, 140, 168);
+            color: rgb(79, 140, 168);
+        }
+    
+        
+       
+    
+        /* --------------------------------------------------------------------------------- */
+    
+        /* Mobile hero image 1x */
+        @media screen and (max-device-pixel-ratio: 1) and (max-width: 767px),
+        screen and (max-resolution: 96dpi) and (max-width: 767px),
+        screen and (max-resolution: 1dppx) and (max-width: 767px) {
+            .hero-title {
+                background-image: linear-gradient(180deg,
+                        rgba(17, 17, 17, 0) 0%,
+                        rgba(17, 17, 17, 0.4) 100%),
+                            url('./images/peakpxm.jpg');
+            }
+        }
+    
+        /* Mobile hero image 2x */
+        @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+        screen and (min-resolution: 192dpi) and (max-width: 767px),
+        screen and (min-resolution: 2dppx) and (max-width: 767px) {
+            .hero-title {
+                background-image: linear-gradient(180deg,
+                        rgba(17, 17, 17, 0) 0%,
+                        rgba(17, 17, 17, 0.4) 100%),
+                            url('./images/peakpxm.jpg');
+                    
+            }
+        }
+    
+        /*Тільки мобілка*/
+    
+        @media screen and (max-width: 767px) {
+            .container {
+                max-width: 375px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+    
+            .hero {
+                padding-bottom: 72px;
+            }
+    
+            .hero-title {
+                padding: 395px 20px 20px 20px;
+            }
+    
+            .hero-text {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1.2;
+                letter-spacing: -0.01em;
+                margin-bottom: 32px;
+                color: white;
+                display: none;
+            }
+    
+           
+            .call-btn {
+                padding: 12px 12px;
+                margin-right: 14px;
+                border-radius: 50%;
+            }
+
+        .call-btn-text{
+            display:none;
+        }
+            .hero-link {
+                padding: 12px 27px;
+            }
+    
+    
+            .scroll-container {
+                display: flex;
+    
+                column-gap: 12px;
+                flex-wrap: wrap;
+                row-gap: 32px;
+            }
+    
+            .hero-scroll-text {
+                display: inline-block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+    
+            
+        }
+    
+        /* ----------------------------------------------------------------------------------------------------------------- */
+    
+        /*Мобілка і планшет*/
+        @media screen and (max-width: 1199px) {}
+    
+        /* --------------------------------------------------------------------------------------------------------- */
+    
+        @media screen and (max-device-pixel-ratio: 1) and (min-width: 768px) and (max-width: 1199px),
+        screen and (max-resolution: 96dpi) and (min-width: 768px) and (max-width: 1199px),
+        screen and (max-resolution: 1dppx) and (min-width: 768px) and (max-width: 1199px) {
+            .hero-title {
+                background-image: linear-gradient(180deg,
+                        rgba(17, 17, 17, 0) 0%,
+                        rgba(17, 17, 17, 0.4) 100%),
+                            url('./images/peakpxt.jpg');
+                    
+            }
+        }
+    
+        /* Laptop image 2px */
+        @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px),
+        screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px),
+        screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
+            .hero-title {
+                background-image: linear-gradient(180deg,
+                        rgba(17, 17, 17, 0) 0%,
+                        rgba(17, 17, 17, 0.4) 100%),
+                            url('./images/peakpxt.jpg');
+                    
+            }
+        }
+    
+        /*Тільки планшет*/
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            .container {
+                width: 768px;
+            }
+    
+            .hero {
+                padding-bottom: 50px;
+            }
+    
+            .hero-title {
+                padding: 670px 40px 40px 40px;
+            }
+    
+    
+            
+    
+    
+            .scroll-container {
+                display: flex;
+    
+            }
+        }
+    
+        /* ------------------------------------------------------------------------------------------ */
+    
+        /*Планшет і десктоп*/
+        @media screen and (min-width: 768px) {
+            .container {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+    
+            .hero {
+                padding-bottom: 72px;
+            }
+    
+            .hero-text {
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 1.21;
+                letter-spacing: -0.03em;
+                color: black;
+                margin-bottom: 32px;
+                max-width: 484px;
+            }
+    
+           
+    
+            .call-btn {
+                padding: 14px 40px;
+                margin-right: 14px;
+            }
+    
+        .call-btn-icon{
+            display: none;
+        }
+            .hero-link {
+                padding: 14px 40px;
+    
+            }
+    
+        }
+    
+        /* ------------------------------------------------------------------------------------------ */
+    
+        @media screen and (max-device-pixel-ratio: 1) and (min-width: 1200px),
+        screen and (max-resolution: 96dpi) and (min-width: 1200px),
+        screen and (max-resolution: 1dppx) and (min-width: 1200px) {
+            .hero-title {
+                background-image: linear-gradient(180deg,
+                        rgba(17, 17, 17, 0) 0%,
+                        rgba(17, 17, 17, 0.4) 100%),
+                        url('./images/peakpx.jpg');
+                   
+            }
+        }
+    
+        /* Desktop contacts image 2px */
+        @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+        screen and (min-resolution: 192dpi) and (min-width: 1200px),
+        screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+            .hero-title {
+                background-image: linear-gradient(180deg,
+                        rgba(17, 17, 17, 0) 0%,
+                        rgba(17, 17, 17, 0.4) 100%),
+                        url('./images/peakpx.jpg');
+                   
+            }
+        }
+    
+        /*Тільки десктоп*/
+        @media screen and (min-width: 1200px) {
+            .container {
+                width: 1200px;
+            }
+           .hero-text{
+            padding-bottom: 340px;
+           }
+            .hero-title {
+                padding: 80px 40px 40px 40px;
+            }
+    
+            .hero-scroll-link {
+                margin-left: auto;
+            }
+    
+            .scroll-container {
+                display: flex;
+            }
+        }
