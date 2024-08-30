@@ -102,17 +102,17 @@
         </ul>
         <button
           type="button"
-          class="mobile-menu-open-btn js-open-modal"
-          data-modal="4"
+          class="mobile-menu-open-btn js-open-menu"
+          aria-expanded="false"
         >
           <svg class="burger-icon" width="24" height="24">
             <use href="./images/sprite.svg#icon-burger"></use>
           </svg>
         </button>
       </div>
-      <div class="modal mobile-menu" data-modal="4">
+      <div class="modal mobile-menu js-menu-container">
         <div class="mobile-menu-container">
-          <button type="button" class="mobile-menu-close-btn js-modal-close">
+          <button type="button" class="mobile-menu-close-btn js-close-menu">
             <svg class="mobile-menu-close-icon" width="28" height="28">
               <use href="./images/close.svg#icon-x-close"></use>
             </svg>
@@ -120,21 +120,21 @@
           <ul class="header-nav-list-mobile list">
             <li class="header-nav-item-mobile">
               <a
-                class="header-nav-item link js-scroll-link js-modal-close"
+                class="header-nav-item link header-mobile-menu-link"
                 href="#hero"
                 >Главная</a
               >
             </li>
             <li class="header-nav-item-mobile">
               <a
-                class="header-nav-item link js-scroll-link js-modal-close"
+                class="header-nav-item link header-mobile-menu-link"
                 href="#popular-services"
                 >Популярные услуги</a
               >
             </li>
             <li class="header-nav-item-mobile">
               <a
-                class="header-nav-item link js-scroll-link js-modal-close"
+                class="header-nav-item link header-mobile-menu-link"
                 href="#reviews"
                 >Отзывы</a
               >
@@ -142,7 +142,7 @@
 
             <li class="header-nav-item-mobile">
               <a
-                class="header-nav-item link js-scroll-link js-modal-close"
+                class="header-nav-item link header-mobile-menu-link"
                 href="#contacts"
                 >Контакты</a
               >
