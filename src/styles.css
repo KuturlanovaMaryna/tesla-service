@@ -1,8 +1,7 @@
 
-
-
 body {
     font-family: 'Roboto', serif;
+    margin: 0;
 }
 
 img {
@@ -52,12 +51,15 @@ ul {
 .header{
     display: none;
 }
-
+.page {
+ 
+    margin: 0;
+}
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px 14px 20px;
+    padding: 20px 14px;
 }
 .logo{
     display: flex;
@@ -110,7 +112,7 @@ ul {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 460px;
+    gap: 40px;
     height: 830px;
     padding: 136px 44px 20px 20px;
     margin-left: auto;
@@ -183,10 +185,6 @@ stroke: #000000;
         margin-left: auto;
         margin-right: auto;
         width: 360px;
-    }
-
-    .mobile-menu-container {
-        gap: 400px;
     }
 }
 
@@ -359,6 +357,10 @@ stroke: #000000;
     margin-bottom: 40px;
 }
 
+.footer-contact-adress-text {
+    font-size: 14px;
+}
+
 }
 
 @media screen and (min-width: 768px)  {
@@ -424,7 +426,9 @@ stroke: #000000;
     margin-top: 0;
 
 }
-
+.footer-contact-adress-text {
+    font-size: 20gitpx;
+}
 }
 
 @media screen and (min-width: 1200px) {
